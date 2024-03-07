@@ -1,0 +1,13 @@
+.inputBox{
+    width: 50%;
+    border-top: none;
+    border-left: none;
+}
+.addbutton{
+    background-color: rgb(193, 28, 199);
+    color: aliceblue;
+}
+.inputdiv{
+    padding:20px;
+    font-weight: 700;
+}

@@ -1,0 +1,27 @@
+.app{
+  text-align: center;
+}
+.tasks{
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  /* text-align: center; */
+  justify-content: space-between;
+  background-color: antiquewhite;
+  border: 2px solid black;
+  margin-bottom: 5px;
+}
+.title{
+  display: flex;
+  font-weight: 600;
+}
+.done{
+  text-decoration: line-through;
+}
+.deletebutton{
+  background-color: brown;
+  font-weight: 600;
+  color: antiquewhite;
+  letter-spacing: 2px;
+  margin:12px;
+}
