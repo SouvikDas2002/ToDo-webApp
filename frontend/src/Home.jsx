@@ -3,21 +3,22 @@ import Input from './components/Input'
 import axios from 'axios';
 import './App.css'
 
+
 const Home = () => {
     const [todos, setTodo] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:4000/getTasks')
+        axios.get(`${process.env.REACT_APP_API}/getTasks`)
             .then(res => setTodo(res.data))
             .catch(err => console.log(err))
     }, [todos]);
     function handleEdit(id) {
-        axios.put(`http://localhost:4000/update/${id}`)
+        axios.put(`${process.env.REACT_APP_API}/update/${id}`)
             .then(res => console.log(res))
             .catch(err => console.log(err))
 
     }
     function handleDelete(id) {
-        axios.delete(`http://localhost:4000/remove/${id}`)
+        axios.delete(`${process.env.REACT_APP_API}/remove/${id}`)
             .then(res => console.log(res))
             .catch(err => console.log(err))
     }

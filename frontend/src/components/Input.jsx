@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
 import './input.css'
 
@@ -6,7 +6,7 @@ const Input = () => {
     const [task,setTask]=useState();
     // const [list,setList]=useState([]);
      function handleClick(){
-        axios.post('http://localhost:4000/addTask',{
+        axios.post(`${process.env.REACT_APP_API}/addTask`,{
             task:task
         }).then(res=>{
             // window.location.reload();
